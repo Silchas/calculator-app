@@ -6,8 +6,13 @@ function App() {
     const [value, setValue] = useState('')
 
     function calculate(expression) {
+    try {
+        const result = eval(expression);
         return result;
+    } catch (error) {
+        return "Error";
     }
+}
 
 
 return (
